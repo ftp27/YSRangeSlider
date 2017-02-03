@@ -12,7 +12,7 @@ Configurable range slider for iOS (IBInspectable and IBDesignable)
 </p>
 
 #### ⚠️ **To use with Swift 2.x please ensure you are using == 2.1.0**
-#### ⚠️ **To use with Swift 3.x please ensure you are using >= 3.0.0** 
+#### ⚠️ **To use with Swift 3.x please ensure you are using >= 3.0.0**
 
 ## How to get started
 
@@ -22,6 +22,14 @@ platform :ios, '8.0'
 use_frameworks!
 pod 'YSRangeSlider'
 ```
+
+The subspec if you want to use the bindings over RxSwift.
+```ruby
+platform :ios, '8.0'
+use_frameworks!
+pod 'YSRangeSlider/RxSwift'
+```
+
 
 ## Requirements
 
