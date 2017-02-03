@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2327e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,15 +21,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9S-h0-hYT">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="TIS-uZ-VPe"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9S-h0-hYT">
+                                <rect key="frame" x="29" y="44" width="310" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAx-lD-Sz8">
+                                <rect key="frame" x="29" y="102" width="290" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XuE-C7-uyE" customClass="YSRangeSlider" customModule="YSRangeSlider">
+                                <rect key="frame" x="0.0" y="294" width="375" height="80"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="Vp3-lo-mjC"/>
@@ -74,11 +82,14 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps enabled" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SqW-si-wwu">
+                                <rect key="frame" x="136" y="394" width="104" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GRd-GE-w9n"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GRd-GE-w9n">
+                                <rect key="frame" x="261" y="389" width="51" height="31"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -86,23 +97,30 @@
                             <constraint firstItem="SqW-si-wwu" firstAttribute="top" secondItem="XuE-C7-uyE" secondAttribute="bottom" constant="20" id="DHW-Jd-Pkz"/>
                             <constraint firstItem="H9S-h0-hYT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="24" id="DlO-n6-aQM"/>
                             <constraint firstItem="XuE-C7-uyE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="P6H-nE-j78"/>
+                            <constraint firstAttribute="trailing" secondItem="H9S-h0-hYT" secondAttribute="trailing" id="VPj-uk-9rv"/>
                             <constraint firstItem="XuE-C7-uyE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VfN-x7-bHO"/>
+                            <constraint firstItem="uAx-lD-Sz8" firstAttribute="trailing" secondItem="H9S-h0-hYT" secondAttribute="trailing" id="XG3-2k-j4I"/>
+                            <constraint firstItem="uAx-lD-Sz8" firstAttribute="leading" secondItem="H9S-h0-hYT" secondAttribute="leading" id="XHE-W4-Ava"/>
+                            <constraint firstItem="uAx-lD-Sz8" firstAttribute="top" secondItem="H9S-h0-hYT" secondAttribute="bottom" constant="20" id="ZqR-DJ-RfQ"/>
+                            <constraint firstItem="H9S-h0-hYT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Zsh-TV-QrM"/>
                             <constraint firstItem="GRd-GE-w9n" firstAttribute="leading" secondItem="SqW-si-wwu" secondAttribute="trailing" constant="21" id="aWw-bJ-Rta"/>
                             <constraint firstItem="GRd-GE-w9n" firstAttribute="top" secondItem="SqW-si-wwu" secondAttribute="top" constant="-5" id="cYM-Ww-A0V"/>
                             <constraint firstAttribute="trailing" secondItem="XuE-C7-uyE" secondAttribute="trailing" id="hVo-Uf-4nL"/>
                             <constraint firstItem="H9S-h0-hYT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iZg-W7-dr7"/>
                             <constraint firstItem="SqW-si-wwu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lti-S4-nGH"/>
+                            <constraint firstItem="uAx-lD-Sz8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ttC-8O-wja"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="label" destination="H9S-h0-hYT" id="Sfe-vU-FEG"/>
+                        <outlet property="labelRxResult" destination="uAx-lD-Sz8" id="dKS-T4-uJn"/>
                         <outlet property="rangeSlider" destination="XuE-C7-uyE" id="VVG-2k-0lJ"/>
                         <outlet property="stepsSwitch" destination="GRd-GE-w9n" id="Kga-jw-yc3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="435" y="385"/>
+            <point key="canvasLocation" x="434.39999999999998" y="384.55772113943033"/>
         </scene>
     </scenes>
 </document>

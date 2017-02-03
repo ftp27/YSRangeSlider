@@ -1,16 +1,24 @@
 PODS:
-  - YSRangeSlider (3.0.0)
+  - RxCocoa (3.1.0):
+    - RxSwift (~> 3.1)
+  - RxSwift (3.2.0)
+  - YSRangeSlider/Core (3.1.0)
+  - YSRangeSlider/RxSwift (3.1.0):
+    - RxCocoa (~> 3.1.0)
+    - YSRangeSlider/Core
 
 DEPENDENCIES:
-  - YSRangeSlider (from `../`)
+  - YSRangeSlider/RxSwift (from `../`)
 
 EXTERNAL SOURCES:
   YSRangeSlider:
     :path: ../
 
 SPEC CHECKSUMS:
-  YSRangeSlider: 57db79ae92b75ec59376b70bb3f22ebc84964de3
+  RxCocoa: 50d7564866da9299161e86a263ce12a0873904d8
+  RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
+  YSRangeSlider: caac1039da1d7de7f020416d2b0a54c4b95aeb4c
 
-PODFILE CHECKSUM: e5cd5f0c9c25be1ded11d3812820cd4ef93c2ad9
+PODFILE CHECKSUM: fd16d7f03fcd4ce593527d794dc4a8f665478ab7
 
-COCOAPODS: 1.1.0.rc.2
+COCOAPODS: 1.1.1

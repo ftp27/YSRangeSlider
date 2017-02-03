@@ -13,12 +13,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var rangeSlider: YSRangeSlider!
     @IBOutlet weak var stepsSwitch: UISwitch!
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var labelRxResult: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         rangeSlider.delegate = self
         stepsSwitch.addTarget(self, action: #selector(switchChanged), for: .valueChanged)
+        
+        rangeSlider.rangeChanged.subscribe(onNext: { (values) in
+            self.labelRxResult.text = "RxCocoa: From \(values.min) to \(values.max)"
+        })
     }
     
     func switchChanged(_ sender: UISwitch) {

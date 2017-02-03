@@ -5,21 +5,6 @@
       location = "group:YSRangeSliderExample/YSRangeSliderExample.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:YSRangeSlider.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:YSRangeSliderExample/Pods/Pods.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:YSRangeSlider.podspec">
-   </FileRef>
-   <FileRef
-      location = "group:YSRangeSlider.jpeg">
-   </FileRef>
-   <FileRef
-      location = "group:LICENSE">
-   </FileRef>
-   <FileRef
-      location = "group:README.md">
    </FileRef>
 </Workspace>

@@ -285,7 +285,7 @@ import UIKit
         updateThumbsPosition()
         CATransaction.commit()
         
-        delegate?.rangeSliderDidChange(self, minimumSelectedValue: minimumSelectedValue, maximumSelectedValue: maximumSelectedValue)
+        delegate?.rangeSliderDidChange?(self, minimumSelectedValue: minimumSelectedValue, maximumSelectedValue: maximumSelectedValue)
     }
     
     private func updateThumbsPosition() {
@@ -333,9 +333,16 @@ extension CGRect {
     }
 }
 
+// MARK: - YSRangeSlider Values
+
+public struct YSRangeSliderValues {
+    public let min: CGFloat
+    public let max: CGFloat
+}
+
 // MARK: - YSRangeSliderDelegate
 
-public protocol YSRangeSliderDelegate: class {
+@objc public protocol YSRangeSliderDelegate: class {
     /** Delegate function that is called every time minimum or maximum selected value is changed
      
     - Parameters:
@@ -343,5 +350,5 @@ public protocol YSRangeSliderDelegate: class {
         - minimumSelectedValue: The minimum selected value
         - maximumSelectedValue: The maximum selected value
     */
-    func rangeSliderDidChange(_ rangeSlider: YSRangeSlider, minimumSelectedValue: CGFloat, maximumSelectedValue: CGFloat)
+    @objc optional func rangeSliderDidChange(_ rangeSlider: YSRangeSlider, minimumSelectedValue: CGFloat, maximumSelectedValue: CGFloat)
 }

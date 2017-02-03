@@ -8,5 +8,5 @@ xcodeproj 'YSRangeSliderExample'
 workspace '../YSRangeSlider'
 
 target :YSRangeSliderExample do
-  pod 'YSRangeSlider', :path => '../'
+  pod 'YSRangeSlider/RxSwift', :path => '../'
 end
