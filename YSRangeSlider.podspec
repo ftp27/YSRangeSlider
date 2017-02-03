@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.subspec 'RxSwift' do |ss|
     ss.source_files = 'YSRangeSlider/RxSwift/*.swift'
     ss.dependency 'YSRangeSlider/Core'
-    ss.dependency 'RxCocoa', '~> 3.1.0'
+    ss.dependency 'RxCocoa'
   end
 
 end
