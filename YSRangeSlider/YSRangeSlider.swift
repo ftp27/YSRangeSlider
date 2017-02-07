@@ -275,6 +275,8 @@ import UIKit
             rightThumbSelected = false
             animate(thumbLayer: rightThumbLayer, isSelected: false)
         }
+        
+        delegate?.rangeSliderDidChange?(self, minimumSelectedValue: minimumSelectedValue, maximumSelectedValue: maximumSelectedValue, isFinish: true)
     }
     
     // MARK: - Private Functions
@@ -285,7 +287,7 @@ import UIKit
         updateThumbsPosition()
         CATransaction.commit()
         
-        delegate?.rangeSliderDidChange?(self, minimumSelectedValue: minimumSelectedValue, maximumSelectedValue: maximumSelectedValue)
+        delegate?.rangeSliderDidChange?(self, minimumSelectedValue: minimumSelectedValue, maximumSelectedValue: maximumSelectedValue, isFinish: false)
     }
     
     private func updateThumbsPosition() {
@@ -338,6 +340,7 @@ extension CGRect {
 public struct YSRangeSliderValues {
     public let min: CGFloat
     public let max: CGFloat
+    public let isFinish: Bool
 }
 
 // MARK: - YSRangeSliderDelegate
@@ -350,5 +353,5 @@ public struct YSRangeSliderValues {
         - minimumSelectedValue: The minimum selected value
         - maximumSelectedValue: The maximum selected value
     */
-    @objc optional func rangeSliderDidChange(_ rangeSlider: YSRangeSlider, minimumSelectedValue: CGFloat, maximumSelectedValue: CGFloat)
+    @objc optional func rangeSliderDidChange(_ rangeSlider: YSRangeSlider, minimumSelectedValue: CGFloat, maximumSelectedValue: CGFloat, isFinish: Bool)
 }

@@ -21,9 +21,14 @@ class ViewController: UIViewController {
         rangeSlider.delegate = self
         stepsSwitch.addTarget(self, action: #selector(switchChanged), for: .valueChanged)
         
-        rangeSlider.rangeChanged.subscribe(onNext: { (values) in
-            self.labelRxResult.text = "RxCocoa: From \(values.min) to \(values.max)"
-        })
+        rangeSlider.rangeChanged
+            .filter({ (values) -> Bool in
+                self.labelRxResult.text = "RxCocoa: From \(values.min) to \(values.max)"
+                return values.isFinish
+            })
+            .subscribe(onNext: { (values) in
+                self.labelRxResult.text = "RxCocoa: From \(values.min) to \(values.max) Finished"
+            })
     }
     
     func switchChanged(_ sender: UISwitch) {
@@ -34,7 +39,7 @@ class ViewController: UIViewController {
 // MARK: - YSRangeSliderDelegate
 
 extension ViewController: YSRangeSliderDelegate {
-    func rangeSliderDidChange(_ rangeSlider: YSRangeSlider, minimumSelectedValue: CGFloat, maximumSelectedValue: CGFloat) {
-        label.text = "From \(minimumSelectedValue) to \(maximumSelectedValue)"
+    func rangeSliderDidChange(_ rangeSlider: YSRangeSlider, minimumSelectedValue: CGFloat, maximumSelectedValue: CGFloat, isFinish: Bool) {
+        label.text = "From \(minimumSelectedValue) to \(maximumSelectedValue)" + (isFinish ? " Finished" : "")
     }
 }

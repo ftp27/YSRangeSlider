@@ -4,7 +4,7 @@ PODS:
   - RxSwift (3.2.0)
   - YSRangeSlider/Core (3.1.0)
   - YSRangeSlider/RxSwift (3.1.0):
-    - RxCocoa (~> 3.1.0)
+    - RxCocoa
     - YSRangeSlider/Core
 
 DEPENDENCIES:
@@ -17,7 +17,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   RxCocoa: 50d7564866da9299161e86a263ce12a0873904d8
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
-  YSRangeSlider: caac1039da1d7de7f020416d2b0a54c4b95aeb4c
+  YSRangeSlider: 13e34088d1184a22b8c6a7cfd08e24cc1a54e0c6
 
 PODFILE CHECKSUM: fd16d7f03fcd4ce593527d794dc4a8f665478ab7
 

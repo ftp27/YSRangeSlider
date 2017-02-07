@@ -16,11 +16,12 @@ public extension YSRangeSlider {
     
     public var rangeChanged: ControlEvent<YSRangeSliderValues> {
         
-        let source = rx_delegate.methodInvoked(#selector(YSRangeSliderDelegate.rangeSliderDidChange(_:minimumSelectedValue:maximumSelectedValue:)))
+        let source = rx_delegate.methodInvoked(#selector(YSRangeSliderDelegate.rangeSliderDidChange(_:minimumSelectedValue:maximumSelectedValue:isFinish:)))
             .map({ (a) -> YSRangeSliderValues in
                 let minValue = try castOrThrow(CGFloat.self, a[1])
                 let maxValue = try castOrThrow(CGFloat.self, a[2])
-                return YSRangeSliderValues(min: minValue, max: maxValue)
+                let isFinish = try castOrThrow(Bool.self,    a[3])
+                return YSRangeSliderValues(min: minValue, max: maxValue, isFinish: isFinish)
             })
         return ControlEvent(events: source)
     }
